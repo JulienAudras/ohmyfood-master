@@ -123,8 +123,9 @@ $footer-color:#353535;
 
 @mixin menuItem{
     .menu__item{
-        @include menuButton
-    }
+        @include menuButton;
+        position:relative;
+    
         .menu__item--title{
             font-size: 1.8rem;
             font-weight: 500;
@@ -141,12 +142,24 @@ $footer-color:#353535;
                 margin-bottom: 0;
             }
             .menu__item--details--price{
-                font-size: 1.5rem;
+                font-size: 3rem;
                 font-weight: 700;
                 margin-top: 5px;
                 margin-bottom: 0;
             }
         }
+        .menu__item--checkBox{
+            position: absolute;
+            color: #008766;
+            right:0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            width:16.66px;
+            background-color: $tertiary-color;
+        
+         }
 }
 
 @mixin menuDisplay{
@@ -704,7 +717,3 @@ body{
 
             
         }
-
-    
-    
-
